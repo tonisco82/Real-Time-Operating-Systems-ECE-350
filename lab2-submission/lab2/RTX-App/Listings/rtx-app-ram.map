@@ -1,0 +1,382 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    uart_polling.o(i.putc) refers to uart_polling.o(i.uart_put_string) for uart_put_string
+    uart_polling.o(i.putc) refers to uart_polling.o(i.uart_put_char) for uart_put_char
+    uart_polling.o(i.uart_put_string) refers to uart_polling.o(i.uart_put_char) for uart_put_char
+    k_mem.o(i.k_alloc_k_stack) refers to k_rtx_init.o(.data) for errno
+    k_mem.o(i.k_alloc_k_stack) refers to k_mem.o(.bss) for g_k_stacks
+    k_mem.o(i.k_alloc_p_stack) refers to k_rtx_init.o(.data) for errno
+    k_mem.o(i.k_alloc_p_stack) refers to k_mem.o(.bss) for g_p_stacks
+    k_mem.o(i.k_mem_init) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem.o(i.k_mem_init) refers to k_mem.o(i.k_mpool_create) for k_mpool_create
+    k_mem.o(i.k_mpool_alloc) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem.o(i.k_mpool_alloc) refers to k_mem.o(i.getIRAM) for getIRAM
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.size_to_height) for size_to_height
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.list_empty) for list_empty
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.pop_node) for pop_node
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.split_block) for split_block
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.height_to_size) for height_to_size
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.pointer_to_index) for pointer_to_index
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(i.mark_index_as_used) for mark_index_as_used
+    k_mem.o(i.k_mpool_alloc) refers to k_rtx_init.o(.data) for errno
+    k_mem.o(i.k_mpool_alloc) refers to k_mem_util.o(.bss) for free_lists
+    k_mem.o(i.k_mpool_create) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem.o(i.k_mpool_create) refers to k_mem.o(i.getIRAM) for getIRAM
+    k_mem.o(i.k_mpool_create) refers to k_mem_util.o(i.log_2) for log_2
+    k_mem.o(i.k_mpool_create) refers to k_mem_util.o(i.init_list) for init_list
+    k_mem.o(i.k_mpool_create) refers to k_mem_util.o(i.mark_index_as_unused) for mark_index_as_unused
+    k_mem.o(i.k_mpool_create) refers to k_rtx_init.o(.data) for errno
+    k_mem.o(i.k_mpool_create) refers to k_mem_util.o(.data) for SET_IRAM1_SIZE_LOG2
+    k_mem.o(i.k_mpool_create) refers to k_mem_util.o(.bss) for free_lists
+    k_mem.o(i.k_mpool_dealloc) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem.o(i.getIRAM) for getIRAM
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.pointer_to_height) for pointer_to_height
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.pointer_to_index) for pointer_to_index
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.mark_index_as_unused) for mark_index_as_unused
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.get_side) for get_side
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.index_to_pointer) for index_to_pointer
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.coalesce_buddies) for coalesce_buddies
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.child_index_to_parent_index) for child_index_to_parent_index
+    k_mem.o(i.k_mpool_dealloc) refers to k_mem_util.o(i.is_buddy_free) for is_buddy_free
+    k_mem.o(i.k_mpool_dealloc) refers to k_rtx_init.o(.data) for errno
+    k_mem.o(i.k_mpool_dump) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem.o(i.k_mpool_dump) refers to k_mem.o(i.getIRAM) for getIRAM
+    k_mem.o(i.k_mpool_dump) refers to k_mem_util.o(i.height_to_size) for height_to_size
+    k_mem.o(i.k_mpool_dump) refers to k_mem_util.o(.bss) for free_lists
+    k_rtx_init.o(i.k_pre_rtx_init) refers to k_mem.o(i.k_alloc_p_stack) for k_alloc_p_stack
+    k_rtx_init.o(i.k_rtx_init) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_rtx_init.o(i.k_rtx_init) refers to k_mem.o(i.k_mem_init) for k_mem_init
+    k_rtx_init.o(i.k_rtx_init) refers to k_task.o(i.k_tsk_init) for k_tsk_init
+    k_rtx_init.o(i.k_rtx_init) refers to k_task_util.o(i.create_queue) for create_queue
+    k_rtx_init.o(i.k_rtx_init) refers to k_task_util.o(i.enqueue_back) for enqueue_back
+    k_rtx_init.o(i.k_rtx_init) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_rtx_init.o(i.k_rtx_init) refers to k_task.o(.emb_text) for k_tsk_start
+    k_rtx_init.o(i.k_rtx_init) refers to k_rtx_init.o(.data) for errno
+    k_rtx_init.o(i.k_rtx_init) refers to k_task.o(.data) for gp_current_task
+    k_rtx_init.o(i.k_rtx_init) refers to k_task.o(.bss) for g_tcbs
+    k_rtx_init.o(i.k_rtx_init) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(.emb_text) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.SVC_Handler) refers to k_rtx_init.o(i.k_rtx_init) for k_rtx_init
+    k_task.o(i.SVC_Handler) refers to k_mem.o(i.k_mpool_alloc) for k_mpool_alloc
+    k_task.o(i.SVC_Handler) refers to k_mem.o(i.k_mpool_dealloc) for k_mpool_dealloc
+    k_task.o(i.SVC_Handler) refers to k_mem.o(i.k_mpool_dump) for k_mpool_dump
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_create) for k_tsk_create
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_exit) for k_tsk_exit
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_yield) for k_tsk_yield
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_set_prio) for k_tsk_set_prio
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_get) for k_tsk_get
+    k_task.o(i.SVC_Handler) refers to k_task.o(i.k_tsk_gettid) for k_tsk_gettid
+    k_task.o(i.k_tsk_create) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_create) refers to k_task.o(i.k_tsk_create_new) for k_tsk_create_new
+    k_task.o(i.k_tsk_create) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task.o(i.k_tsk_create) refers to k_task_util.o(i.enqueue_back) for enqueue_back
+    k_task.o(i.k_tsk_create) refers to k_task_util.o(i.visualize) for visualize
+    k_task.o(i.k_tsk_create) refers to k_task.o(i.k_tsk_run_new) for k_tsk_run_new
+    k_task.o(i.k_tsk_create) refers to k_task.o(.data) for num_total_tasks
+    k_task.o(i.k_tsk_create) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.k_tsk_create) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(i.k_tsk_create_new) refers to k_mem.o(i.k_mpool_alloc) for k_mpool_alloc
+    k_task.o(i.k_tsk_create_new) refers to k_mem.o(i.k_mpool_dump) for k_mpool_dump
+    k_task.o(i.k_tsk_create_new) refers to k_mem.o(i.k_alloc_k_stack) for k_alloc_k_stack
+    k_task.o(i.k_tsk_create_new) refers to k_task.o(.data) for IRAM2_mem_allocated
+    k_task.o(i.k_tsk_create_new) refers to hal.o(.emb_text) for SVC_RTE
+    k_task.o(i.k_tsk_exit) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_exit) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task.o(i.k_tsk_exit) refers to k_task_util.o(i.remove_tcb_given_tid) for remove_tcb_given_tid
+    k_task.o(i.k_tsk_exit) refers to k_task_util.o(i.enqueue_back) for enqueue_back
+    k_task.o(i.k_tsk_exit) refers to k_task_util.o(i.visualize) for visualize
+    k_task.o(i.k_tsk_exit) refers to k_mem.o(i.k_mpool_dealloc) for k_mpool_dealloc
+    k_task.o(i.k_tsk_exit) refers to k_task.o(i.k_tsk_run_new) for k_tsk_run_new
+    k_task.o(i.k_tsk_exit) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.k_tsk_exit) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.k_tsk_exit) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(i.k_tsk_get) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_get) refers to k_task_util.o(i.visualize) for visualize
+    k_task.o(i.k_tsk_get) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.k_tsk_get) refers to k_mem.o(.constdata) for g_k_stack_size
+    k_task.o(i.k_tsk_gettid) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.k_tsk_init) refers to k_task.o(i.k_tsk_init_first) for k_tsk_init_first
+    k_task.o(i.k_tsk_init) refers to k_task.o(i.k_tsk_create_new) for k_tsk_create_new
+    k_task.o(i.k_tsk_init) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.k_tsk_init) refers to k_task.o(.data) for g_num_active_tasks
+    k_task.o(i.k_tsk_init_first) refers to null_task.o(i.task_null) for task_null
+    k_task.o(i.k_tsk_ls) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_run_new) refers to k_task.o(i.scheduler) for scheduler
+    k_task.o(i.k_tsk_run_new) refers to k_task.o(.emb_text) for k_tsk_switch
+    k_task.o(i.k_tsk_run_new) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.k_tsk_set_prio) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_set_prio) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task.o(i.k_tsk_set_prio) refers to k_task_util.o(i.remove_tcb_given_tid) for remove_tcb_given_tid
+    k_task.o(i.k_tsk_set_prio) refers to k_task_util.o(i.visualize) for visualize
+    k_task.o(i.k_tsk_set_prio) refers to k_task_util.o(i.enqueue_back) for enqueue_back
+    k_task.o(i.k_tsk_set_prio) refers to k_task.o(i.k_tsk_run_new) for k_tsk_run_new
+    k_task.o(i.k_tsk_set_prio) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.k_tsk_set_prio) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.k_tsk_set_prio) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(i.k_tsk_set_prio) refers to k_task.o(.conststring) for .conststring
+    k_task.o(i.k_tsk_set_prio) refers to k_rtx_init.o(.data) for errno
+    k_task.o(i.k_tsk_yield) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.k_tsk_yield) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task.o(i.k_tsk_yield) refers to k_task_util.o(i.remove_tcb_given_tid) for remove_tcb_given_tid
+    k_task.o(i.k_tsk_yield) refers to k_task_util.o(i.visualize) for visualize
+    k_task.o(i.k_tsk_yield) refers to k_task_util.o(i.enqueue_back) for enqueue_back
+    k_task.o(i.k_tsk_yield) refers to k_task.o(i.k_tsk_run_new) for k_tsk_run_new
+    k_task.o(i.k_tsk_yield) refers to k_task.o(.data) for gp_current_task
+    k_task.o(i.k_tsk_yield) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(i.k_tsk_yield) refers to k_task.o(.bss) for g_tcbs
+    k_task.o(i.scheduler) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task.o(i.scheduler) refers to k_task_util.o(.bss) for TCB_array
+    k_task.o(i.scheduler) refers to k_task.o(.bss) for g_tcbs
+    main.o(i.main) refers to system_lpc17xx.o(i.SystemInit) for SystemInit
+    main.o(i.main) refers to uart_polling.o(i.uart_init) for uart_init
+    main.o(i.main) refers to printf.o(i.init_printf) for init_printf
+    main.o(i.main) refers to printf.o(i.tfp_printf) for tfp_printf
+    main.o(i.main) refers to ae.o(i.ae_init) for ae_init
+    main.o(i.main) refers to uart_polling.o(i.putc) for putc
+    main.o(i.main) refers to main.o(.conststring) for .conststring
+    main.o(i.main) refers to main.o(i.__get_MSP) for __get_MSP
+    main.o(i.main) refers to k_rtx_init.o(i.k_pre_rtx_init) for k_pre_rtx_init
+    main.o(i.main) refers to main.o(.bss) for tasks
+    main.o(i.main) refers to main.o(.data) for sys
+    k_mem_util.o(i.child_index_to_parent_index) refers to k_mem_util.o(i.index_to_relative_index) for index_to_relative_index
+    k_mem_util.o(i.coalesce_buddies) refers to k_mem_util.o(i.pointer_to_index) for pointer_to_index
+    k_mem_util.o(i.coalesce_buddies) refers to k_mem_util.o(i.index_to_pointer) for index_to_pointer
+    k_mem_util.o(i.coalesce_buddies) refers to k_mem_util.o(i.remove_node) for remove_node
+    k_mem_util.o(i.coalesce_buddies) refers to k_mem_util.o(i.child_index_to_parent_index) for child_index_to_parent_index
+    k_mem_util.o(i.coalesce_buddies) refers to k_mem_util.o(i.mark_index_as_unused) for mark_index_as_unused
+    k_mem_util.o(i.get_used_block) refers to k_mem_util.o(.bss) for used_blocks
+    k_mem_util.o(i.height_to_size) refers to k_mem_util.o(.data) for SET_IRAM1_SIZE_LOG2
+    k_mem_util.o(i.index_to_pointer) refers to k_mem_util.o(i.index_to_relative_index) for index_to_relative_index
+    k_mem_util.o(i.index_to_pointer) refers to k_mem_util.o(i.height_to_size) for height_to_size
+    k_mem_util.o(i.is_buddy_free) refers to k_mem_util.o(i.get_side) for get_side
+    k_mem_util.o(i.is_buddy_free) refers to k_mem_util.o(i.get_used_block) for get_used_block
+    k_mem_util.o(i.mark_index_as_unused) refers to k_mem_util.o(i.set_used_block) for set_used_block
+    k_mem_util.o(i.mark_index_as_unused) refers to k_mem_util.o(i.index_to_pointer) for index_to_pointer
+    k_mem_util.o(i.mark_index_as_unused) refers to k_mem_util.o(i.push_node) for push_node
+    k_mem_util.o(i.mark_index_as_unused) refers to k_mem_util.o(.bss) for free_lists
+    k_mem_util.o(i.mark_index_as_used) refers to k_mem_util.o(i.set_used_block) for set_used_block
+    k_mem_util.o(i.mark_index_as_used) refers to k_mem_util.o(i.index_to_pointer) for index_to_pointer
+    k_mem_util.o(i.mark_index_as_used) refers to k_mem_util.o(i.remove_node) for remove_node
+    k_mem_util.o(i.parent_index_to_child_index) refers to k_mem_util.o(i.index_to_relative_index) for index_to_relative_index
+    k_mem_util.o(i.pointer_to_height) refers to k_mem_util.o(i.pointer_to_index) for pointer_to_index
+    k_mem_util.o(i.pointer_to_height) refers to k_mem_util.o(i.get_used_block) for get_used_block
+    k_mem_util.o(i.pointer_to_index) refers to k_mem_util.o(i.height_to_size) for height_to_size
+    k_mem_util.o(i.pointer_to_index) refers to k_mem_util.o(i.relative_index_to_index) for relative_index_to_index
+    k_mem_util.o(i.pop_node) refers to k_mem_util.o(i.remove_node) for remove_node
+    k_mem_util.o(i.set_used_block) refers to k_mem_util.o(.bss) for used_blocks
+    k_mem_util.o(i.size_to_height) refers to k_mem_util.o(i.log_2) for log_2
+    k_mem_util.o(i.size_to_height) refers to k_mem_util.o(.data) for SET_IRAM1_SIZE_LOG2
+    k_mem_util.o(i.split_block) refers to k_mem_util.o(i.pointer_to_index) for pointer_to_index
+    k_mem_util.o(i.split_block) refers to k_mem_util.o(i.get_used_block) for get_used_block
+    k_mem_util.o(i.split_block) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_mem_util.o(i.split_block) refers to k_mem_util.o(i.mark_index_as_used) for mark_index_as_used
+    k_mem_util.o(i.split_block) refers to k_mem_util.o(i.parent_index_to_child_index) for parent_index_to_child_index
+    k_mem_util.o(i.split_block) refers to k_mem_util.o(i.mark_index_as_unused) for mark_index_as_unused
+    k_task_util.o(i.create_queue) refers to k_task_util.o(.bss) for TCB_array
+    k_task_util.o(i.enqueue_back) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task_util.o(i.enqueue_back) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task_util.o(i.enqueue_front) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task_util.o(i.enqueue_front) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task_util.o(i.remove_tcb_given_tid) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task_util.o(i.visualize) refers to printf.o(i.tfp_printf) for tfp_printf
+    k_task_util.o(i.visualize) refers to k_task_util.o(i.prio_to_array_index) for prio_to_array_index
+    k_task_util.o(i.visualize) refers to k_task_util.o(.bss) for TCB_array
+    printf.o(i.a2i) refers to printf.o(i.a2d) for a2d
+    printf.o(i.i2a) refers to printf.o(i.ui2a) for ui2a
+    printf.o(i.init_printf) refers to printf.o(.data) for stdout_putf
+    printf.o(i.tfp_format) refers to printf.o(i.a2i) for a2i
+    printf.o(i.tfp_format) refers to printf.o(i.ui2a) for ui2a
+    printf.o(i.tfp_format) refers to printf.o(i.putchw) for putchw
+    printf.o(i.tfp_format) refers to printf.o(i.i2a) for i2a
+    printf.o(i.tfp_printf) refers to printf.o(i.tfp_format) for tfp_format
+    printf.o(i.tfp_printf) refers to printf.o(.data) for stdout_putf
+    printf.o(i.tfp_sprintf) refers to printf.o(i.tfp_format) for tfp_format
+    printf.o(i.tfp_sprintf) refers to printf.o(i.putcp) for putcp
+    null_task.o(i.task_null) refers to printf.o(i.tfp_printf) for tfp_printf
+    startup_lpc17xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(STACK) for __initial_sp
+    startup_lpc17xx.o(RESET) refers to startup_lpc17xx.o(.text) for Reset_Handler
+    startup_lpc17xx.o(RESET) refers to k_task.o(i.SVC_Handler) for SVC_Handler
+    startup_lpc17xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_lpc17xx.o(.text) refers to system_lpc17xx.o(i.SystemInit) for SystemInit
+    startup_lpc17xx.o(.text) refers to __main.o(!!!main) for __main
+    startup_lpc17xx.o(.text) refers to startup_lpc17xx.o(HEAP) for Heap_Mem
+    startup_lpc17xx.o(.text) refers to startup_lpc17xx.o(STACK) for Stack_Mem
+    system_lpc17xx.o(i.SystemCoreClockUpdate) refers to lludivv7m.o(.text) for __aeabi_uldivmod
+    system_lpc17xx.o(i.SystemCoreClockUpdate) refers to system_lpc17xx.o(.data) for SystemCoreClock
+    ae.o(i.ae_init) refers to ae.o(i.ae_set_sys_info) for ae_set_sys_info
+    ae.o(i.ae_init) refers to ae.o(i.ae_set_task_info) for ae_set_task_info
+    ae.o(i.ae_set_task_info) refers to ae_tasks.o(i.set_ae_tasks) for set_ae_tasks
+    ae_tasks.o(i.dump_task_info) refers to printf.o(i.tfp_printf) for tfp_printf
+    ae_tasks.o(i.priv_task1) refers to printf.o(i.tfp_printf) for tfp_printf
+    ae_tasks.o(i.priv_task1) refers to ae_tasks.o(i.dump_task_info) for dump_task_info
+    ae_tasks.o(i.priv_task1) refers to uart_polling.o(i.uart_put_char) for uart_put_char
+    ae_tasks.o(i.priv_task1) refers to uart_polling.o(i.uart_put_string) for uart_put_string
+    ae_tasks.o(i.priv_task1) refers to ae_tasks.o(i.task1) for task1
+    ae_tasks.o(i.set_ae_tasks) refers to ae_tasks.o(i.priv_task1) for priv_task1
+    ae_tasks.o(i.set_ae_tasks) refers to ae_tasks.o(i.task1) for task1
+    ae_tasks.o(i.task1) refers to printf.o(i.tfp_printf) for tfp_printf
+    ae_tasks.o(i.task1) refers to ae_tasks.o(i.dump_task_info) for dump_task_info
+    ae_tasks.o(i.task1) refers to uart_polling.o(i.uart_put_char) for uart_put_char
+    ae_tasks.o(i.task1) refers to uart_polling.o(i.uart_put_string) for uart_put_string
+    ae_tasks.o(i.task1) refers to ae_tasks.o(i.task2) for task2
+    ae_tasks.o(i.task1) refers to ae_tasks.o(.bss) for task_info
+    ae_tasks.o(i.task2) refers to uart_polling.o(i.uart_put_string) for uart_put_string
+    ae_tasks.o(i.task3) refers to uart_polling.o(i.uart_put_string) for uart_put_string
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_ldiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_lpc17xx.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing uart_polling.o(.rev16_text), (4 bytes).
+    Removing uart_polling.o(.revsh_text), (4 bytes).
+    Removing uart_polling.o(.rrx_text), (6 bytes).
+    Removing uart_polling.o(i.uart_get_char), (48 bytes).
+    Removing hal.o(.rev16_text), (4 bytes).
+    Removing hal.o(.revsh_text), (4 bytes).
+    Removing hal.o(.rrx_text), (6 bytes).
+    Removing k_mem.o(.rev16_text), (4 bytes).
+    Removing k_mem.o(.revsh_text), (4 bytes).
+    Removing k_mem.o(.rrx_text), (6 bytes).
+    Removing k_rtx_init.o(.rev16_text), (4 bytes).
+    Removing k_rtx_init.o(.revsh_text), (4 bytes).
+    Removing k_rtx_init.o(.rrx_text), (6 bytes).
+    Removing k_rtx_init.o(i.k_get_sys_info), (6 bytes).
+    Removing k_task.o(.rev16_text), (4 bytes).
+    Removing k_task.o(.revsh_text), (4 bytes).
+    Removing k_task.o(.rrx_text), (6 bytes).
+    Removing k_task.o(i.k_tsk_ls), (52 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing k_mem_util.o(.rev16_text), (4 bytes).
+    Removing k_mem_util.o(.revsh_text), (4 bytes).
+    Removing k_mem_util.o(.rrx_text), (6 bytes).
+    Removing k_task_util.o(.rev16_text), (4 bytes).
+    Removing k_task_util.o(.revsh_text), (4 bytes).
+    Removing k_task_util.o(.rrx_text), (6 bytes).
+    Removing k_task_util.o(i.enqueue_front), (172 bytes).
+    Removing printf.o(i.putcp), (10 bytes).
+    Removing printf.o(i.tfp_sprintf), (44 bytes).
+    Removing null_task.o(.rev16_text), (4 bytes).
+    Removing null_task.o(.revsh_text), (4 bytes).
+    Removing null_task.o(.rrx_text), (6 bytes).
+    Removing system_lpc17xx.o(.rev16_text), (4 bytes).
+    Removing system_lpc17xx.o(.revsh_text), (4 bytes).
+    Removing system_lpc17xx.o(.rrx_text), (6 bytes).
+    Removing system_lpc17xx.o(i.SystemCoreClockUpdate), (424 bytes).
+    Removing system_lpc17xx.o(.data), (4 bytes).
+    Removing ae_tasks.o(i.task3), (36 bytes).
+
+39 unused section(s) (total 936 bytes) removed from the image.

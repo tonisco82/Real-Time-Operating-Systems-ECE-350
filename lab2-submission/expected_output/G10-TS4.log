@@ -1,0 +1,29 @@
+G10-TS4: START
+G10-TS4-LOG2: TID = 1, priv_task1: starting test0
+A
+G10-TS4-LOG2: TID = 1, priv_task1: Changing own priority
+C
+G10-TS4-LOG2: TID = 2, task1: switching priority and yielding
+E
+G10-TS4-LOG2: TID = 3, task1: switching priority
+D
+G10-TS4-LOG: Test[0]-[0]: task switch.
+G10-TS4-LOG: Test[0]-[0]: result = 1.
+G10-TS4-LOG: Test[0]-[1]: task switch.
+G10-TS4-LOG: Test[0]-[1]: result = 1.
+F
+G10-TS4-LOG: Test[0]-[2]: task switch.
+G10-TS4-LOG: Test[0]-[2]: result = 1.
+B
+G10-TS4-LOG: Test[0]-[3]: task switch.
+G10-TS4-LOG: Test[0]-[3]: result = 1.
+G10-TS4-LOG: Test[0]-[4]: task switch.
+G10-TS4-LOG: Test[0]-[4]: result = 1.
+G10-TS4-LOG: real exec order: 1 -> 2 -> 2 -> 3 -> 2 -> 3 -> 1 -> NIL
+G10-TS4-LOG: expt exec order: 1 -> 2 -> 2 -> 3 -> 2 -> 3 -> 1 -> NIL
+G10-TS4: FINISHED
+G10-TS4-LOG: Test 0: 5/5 PASSED. Expected = 0x1F, result = 0x1F
+G10-TS4: 1/1 test function(s) COMPLETED.
+G10-TS4: 5/5 tests PASSED.
+G10-TS4: 0/5 tests FAILED.
+G10-TS4: END

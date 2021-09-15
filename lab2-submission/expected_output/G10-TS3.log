@@ -1,0 +1,60 @@
+G10-TS3: START
+G10-TS3-LOG: Test[0]-[0]: .
+G10-TS3-LOG: Test[0]-[0]: result = 1.
+0x10007400: 0x400
+0x10007800: 0x800
+2 free memory block(s) found
+G10-TS3-LOG: Test[0]-[1]: .
+G10-TS3-LOG: Test[0]-[1]: result = 1.
+G10-TS3-LOG: Test[0]-[2]: .
+G10-TS3-LOG: Test[0]-[2]: result = 1.
+0x10007000: 0x1000
+1 free memory block(s) found
+G10-TS3-LOG: Test[0]-[3]: .
+G10-TS3-LOG: Test[0]-[3]: result = 1.
+G10-TS3-LOG: Test[0]-[4]: .
+G10-TS3-LOG: Test[0]-[4]: result = 1.
+G10-TS3-LOG: Test[0]-[5]: .
+G10-TS3-LOG: Test[0]-[5]: result = 1.
+0x10007400: 0x400
+0x10007800: 0x800
+2 free memory block(s) found
+G10-TS3-LOG: Test[0]-[6]: .
+G10-TS3-LOG: Test[0]-[6]: result = 1.
+G10-TS3-LOG: Test[0]-[7]: .
+G10-TS3-LOG: Test[0]-[7]: result = 1.
+G10-TS3-LOG: Test[0]-[8]: .
+G10-TS3-LOG: Test[0]-[8]: result = 1.
+0x10007400: 0x400
+1 free memory block(s) found
+G10-TS3-LOG: Test[0]-[9]: .
+G10-TS3-LOG: Test[0]-[9]: result = 1.
+G10-TS3-LOG: Test[0]-[10]: .
+G10-TS3-LOG: Test[0]-[10]: result = 1.
+G10-TS3-LOG: Test[0]-[11]: .
+G10-TS3-LOG: Test[0]-[11]: result = 1.
+0 free memory block(s) found
+G10-TS3-LOG: Test[0]-[12]: .
+G10-TS3-LOG: Test[0]-[12]: result = 1.
+G10-TS3-LOG: Test[0]-[13]: .
+G10-TS3-LOG: Test[0]-[13]: result = 1.
+0x10007000: 0x400
+1 free memory block(s) found
+G10-TS3-LOG: Test[0]-[14]: .
+G10-TS3-LOG: Test[0]-[14]: result = 1.
+0x10007000: 0x400
+1 free memory block(s) found
+G10-TS3-LOG: Test[0]-[15]: .
+G10-TS3-LOG: Test[0]-[15]: result = 1.
+G10-TS3-LOG: Test[0]-[16]: .
+G10-TS3-LOG: Test[0]-[16]: result = 1.
+0x10007000: 0x1000
+1 free memory block(s) found
+G10-TS3-LOG: Test[0]-[17]: .
+G10-TS3-LOG: Test[0]-[17]: result = 1.
+G10-TS3: FINISHED
+G10-TS3-LOG: Test 0: 18/18 PASSED. Expected = 0x3FFFF, result = 0x3FFFF
+G10-TS3: 1/1 test function(s) COMPLETED.
+G10-TS3: 18/18 tests PASSED.
+G10-TS3: 0/18 tests FAILED.
+G10-TS3: END

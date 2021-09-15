@@ -1,0 +1,243 @@
+---
+IN RTX_INIT
+0x2007c200: 0x200
+0x2007c400: 0x400
+0x2007c800: 0x800
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+6 free memory block(s) found
+0x2007c400: 0x400
+0x2007c800: 0x800
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+5 free memory block(s) found
+0x2007c600: 0x200
+0x2007c800: 0x800
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+5 free memory block(s) found
+0x2007c800: 0x800
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+4 free memory block(s) found
+0x2007ca00: 0x200
+0x2007cc00: 0x400
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+5 free memory block(s) found
+0x2007cc00: 0x400
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+4 free memory block(s) found
+---
+ENQUEUE_BACK (prio=0)
+q->HEAD: 0x0.
+1
+	added: tid=0 | addr=0x10003230
+tid=0 GOOD in rtx_init
+	addr=0x10003230
+---
+ENQUEUE_BACK (prio=3)
+q->HEAD: 0x0.
+1
+	added: tid=1 | addr=0x1000324c
+---
+TSK_YIELD
+---
+REMOVE_TCB_GIVEN_TID (0)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => TAIL
+---
+ENQUEUE_BACK (prio=0)
+q->HEAD: 0x0.
+1
+	added: tid=0 | addr=0x10003230
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+---
+SCHEDULER
+	selected prio = MEDIUM (3)
+	TCB_array tid: 1
+	return address (from g_tcbs): 0x1000324c
+	return address (from TCB_array): 0x1000324c
+---
+STARTING TASK (tid=1)
+priv_task1: TID =1
+about to create task2:
+---
+TSK_CREATE
+num_total_tasks=2
+0x2007ce00: 0x200
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+4 free memory block(s) found
+(tid=2 | usp=0x20083400)
+---
+ENQUEUE_BACK (prio=3)
+q->HEAD: 0x1000324c.
+1
+	added: tid=2 | addr=0x10003268
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=2)] => [(tid=2)(prio=3)(priv=0)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+task (INSIDE CREATE) = 2
+---
+SCHEDULER
+	selected prio = MEDIUM (3)
+	TCB_array tid: 1
+	return address (from g_tcbs): 0x1000324c
+	return address (from TCB_array): 0x1000324c
+---
+STARTING TASK (tid=1)
+new_tid=2
+---
+TSK_GET
+(tid=2 | usp=0x20083400)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=2)] => [(tid=2)(prio=3)(priv=0)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+tid: 2
+state: 1
+prio: 129
+k_sp_base: 0x10000600
+k_sp: 0x10000900
+k_stack_size: 0x300
+u_sp_base: 0x20083200
+u_sp 0x20083400
+u_stack_size: 0x200
+AAAAA
+BBBBB
+CCCCC
+DDDDD
+EEEEE
+FFFFF
+priv_task1 before yielding cpu.
+---
+TSK_YIELD
+---
+REMOVE_TCB_GIVEN_TID (1)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=2)(prio=3)(priv=0)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+---
+ENQUEUE_BACK (prio=3)
+q->HEAD: 0x10003268.
+2
+	added: tid=1 | addr=0x1000324c
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=2)(prio=3)(priv=0)(state=1)] => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+---
+SCHEDULER
+	selected prio = MEDIUM (3)
+	TCB_array tid: 2
+	return address (from g_tcbs): 0x10003268
+	return address (from TCB_array): 0x10003268
+---
+STARTING TASK (tid=2)
+task2: TID =2
+about to create task3:
+---
+TSK_CREATE
+num_total_tasks=3
+0x2007d000: 0x1000
+0x2007e000: 0x2000
+0x20080000: 0x4000
+3 free memory block(s) found
+(tid=3 | usp=0x20083200)
+---
+ENQUEUE_BACK (prio=2)
+q->HEAD: 0x0.
+1
+	added: tid=3 | addr=0x10003284
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=2)(prio=3)(priv=0)(state=2)] => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => [(tid=3)(prio=2)(priv=0)(state=1)] => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+task (INSIDE CREATE) = 3
+---
+SCHEDULER
+	selected prio = MEDIUM (3)
+	TCB_array tid: 2
+	return address (from g_tcbs): 0x10003268
+	return address (from TCB_array): 0x10003268
+---
+STARTING TASK (tid=2)
+---
+TSK_GET
+(tid=2 | usp=0x20083400)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=2)(prio=3)(priv=0)(state=2)] => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => [(tid=3)(prio=2)(priv=0)(state=1)] => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+tid: 2
+state: 2
+prio: 129
+k_sp_base: 0x10000600
+k_sp: 0x10000900
+k_stack_size: 0x300
+u_sp_base: 0x20083200
+u_sp 0x20083400
+u_stack_size: 0x200
+new_tid=3
+---
+TSK_GET
+(tid=3 | usp=0x20083200)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=2)(prio=3)(priv=0)(state=2)] => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => [(tid=3)(prio=2)(priv=0)(state=1)] => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+tid: 3
+state: 1
+prio: 130
+k_sp_base: 0x10000900
+k_sp: 0x10000c00
+k_stack_size: 0x300
+u_sp_base: 0x20083000
+u_sp 0x20083200
+u_stack_size: 0x200
+---
+TSK_SET_PRIO
+tid to change prio: 2
+prev_prio: 3
+---
+REMOVE_TCB_GIVEN_TID (2)
+PRIO=4: HEAD => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => [(tid=3)(prio=2)(priv=0)(state=1)] => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv=0)(state=1)] => TAIL
+---
+ENQUEUE_BACK (prio=4)
+q->HEAD: 0x0.
+1
+	added: tid=2 | addr=0x10003268
+PRIO=4: HEAD => [(tid=2)(prio=4)(priv=0)(state=2)] => TAIL
+PRIO=3: HEAD => [(tid=1)(prio=3)(priv=1)(state=1)] => TAIL
+PRIO=2: HEAD => [(tid=3)(prio=2)(priv=0)(state=1)] => TAIL
+PRIO=1: HEAD => TAIL
+PRIO=0: HEAD => [(tid=0)(prio=0)(priv
