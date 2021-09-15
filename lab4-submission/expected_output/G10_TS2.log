@@ -1,0 +1,30 @@
+G10-TS2: START
+G10-TS2-LOG2: TID = 1, priv_task1: starting test0
+=> START: priv_task1()
+COMMAND Sent succesfully...
+TEST CASE 1: PASS
+G10-TS2-LOG: Test[0]-[0]: task being created.
+G10-TS2-LOG: Test[0]-[0]: result = 1.
+COMMAND Sent succesfully...
+TEST CASE 2: PASS
+G10-TS2-LOG: Test[0]-[1]: task being created.
+G10-TS2-LOG: Test[0]-[1]: result = 1.
+COMMAND Sent succesfully...
+TEST CASE 3: PASS
+G10-TS2-LOG: Test[0]-[2]: task being created.
+G10-TS2-LOG: Test[0]-[2]: result = 1.
+COMMAND Sent succesfully...
+TEST CASE 4: PASS
+G10-TS2-LOG: Test[0]-[3]: task being created.
+G10-TS2-LOG: Test[0]-[3]: result = 1.
+COMMAND Sent succesfully...
+TEST CASE 5: PASS
+G10-TS2-LOG: Test[0]-[4]: task being created.
+G10-TS2-LOG: Test[0]-[4]: result = 1.
+G10-TS2: FINISHED
+G10-TS2-LOG: Test 0: 5/5 PASSED. Expected = 0x1F, result = 0x1F
+G10-TS2: 1/1 test function(s) COMPLETED.
+G10-TS2: 5/5 tests PASSED.
+G10-TS2: 0/5 tests FAILED.
+G10-TS2: END
+

@@ -1,0 +1,48 @@
+G10-TS3: START
+G10-TS3-LOG2: TID = 1, priv_task1: starting test0
+=> START: priv_task1() w/ tid=1
+TEST CASE 1: PASS
+G10-TS3-LOG: Test[0]-[0]: task being created.
+G10-TS3-LOG: Test[0]-[0]: result = 1.
+=> START: task1() w/ tid=2
+TEST CASE 2: PASS
+G10-TS3-LOG: Test[0]-[1]: task being created.
+G10-TS3-LOG: Test[0]-[1]: result = 1.
+=> START: task2() w/ tid=3
+TEST CASE 3: PASS
+G10-TS3-LOG: Test[0]-[2]: task being created.
+G10-TS3-LOG: Test[0]-[2]: result = 1.
+TEST CASE 4: PASS
+G10-TS3-LOG: Test[0]-[3]: task being created.
+G10-TS3-LOG: Test[0]-[3]: result = 1.
+TEST CASE 5: PASS
+G10-TS3-LOG: Test[0]-[4]: task being created.
+G10-TS3-LOG: Test[0]-[4]: result = 1.
+TEST CASE 6: PASS
+G10-TS3-LOG: Test[0]-[5]: task being created.
+G10-TS3-LOG: Test[0]-[5]: result = 1.
+TEST CASE 7: PASS
+G10-TS3-LOG: Test[0]-[6]: task being created.
+G10-TS3-LOG: Test[0]-[6]: result = 1.
+TEST CASE 8: PASS
+G10-TS3-LOG: Test[0]-[7]: task being created.
+G10-TS3-LOG: Test[0]-[7]: result = 1.
+TEST CASE 9: PASS
+G10-TS3-LOG: Test[0]-[8]: task being created.
+G10-TS3-LOG: Test[0]-[8]: result = 1.
+TEST CASE 10: PASS
+G10-TS3-LOG: Test[0]-[9]: task being created.
+G10-TS3-LOG: Test[0]-[9]: result = 1.
+TEST CASE 11: PASS
+G10-TS3-LOG: Test[0]-[10]: task being created.
+G10-TS3-LOG: Test[0]-[10]: result = 1.
+TEST CASE 12: PASS
+G10-TS3-LOG: Test[0]-[11]: task being created.
+G10-TS3-LOG: Test[0]-[11]: result = 1.
+G10-TS3: FINISHED
+G10-TS3-LOG: Test 0: 12/12 PASSED. Expected = 0xFFF, result = 0xFFF
+G10-TS3: 1/1 test function(s) COMPLETED.
+G10-TS3: 12/12 tests PASSED.
+G10-TS3: 0/12 tests FAILED.
+G10-TS3: END
+
