@@ -1,0 +1,91 @@
+k_mem_init: algo = 5
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x10007000, 0x10007fff].
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x2007c000, 0x20083fff].
+G10-TS2: START
+k_mpool_alloc: mpid = 1, size = 768, 0x300
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_recv_msg: buf=0x2007c2ac, len=64
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_recv_msg: buf=0x2007c580, len=128
+G10-TS2-LOG2: TID = 1, priv_task1: starting test0
+=> START: priv_task1() w/ tid=1
+k_tsk_set_prio: entering...
+task_id = 1, prio = 131.
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_send_msg_nb: receiver_tid = 1, buf=0x10003b94
+k_mbx_get: tid=1
+size of priv_task1 mailbox (after buf0): 107
+k_mbx_get: tid=1
+TEST CASE 1: PASS
+G10-TS2-LOG: Test[0]-[0]: task being created.
+G10-TS2-LOG: Test[0]-[0]: result = 1.
+k_tsk_create: entering...
+task = 0x10000061, task_entry = 0x2b1d, prio=129, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=> START: task1() w/ tid=3
+k_send_msg: receiver_tid = 1, buf=0x10003c14
+k_mbx_get: tid=1
+size of priv_task1 mailbox (after buf1): 90
+k_mbx_get: tid=1
+TEST CASE 2: PASS
+G10-TS2-LOG: Test[0]-[1]: task being created.
+G10-TS2-LOG: Test[0]-[1]: result = 1.
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d000
+k_tsk_create: entering...
+task = 0x10000062, task_entry = 0x2c39, prio=128, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=> START: task2() w/ tid=3
+k_send_msg_nb: receiver_tid = 1, buf=0x10003c94
+k_mbx_get: tid=1
+size of priv_task1 mailbox (after buf2): 0
+k_mbx_get: tid=1
+TEST CASE 3: PASS
+G10-TS2-LOG: Test[0]-[2]: task being created.
+G10-TS2-LOG: Test[0]-[2]: result = 1.
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d000
+k_tsk_create: entering...
+task = 0x10000063, task_entry = 0x2d49, prio=130, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=> START: task3() w/ tid=3
+k_send_msg_nb: receiver_tid = 1, buf=0x10003d14
+k_mbx_get: tid=1
+size of priv_task1 mailbox (after buf3): 0
+TEST CASE 4: PASS
+G10-TS2-LOG: Test[0]-[3]: task being created.
+G10-TS2-LOG: Test[0]-[3]: result = 1.
+k_send_msg: receiver_tid = 1, buf=0x10003d14
+Printing message data in order:
+k_recv_msg: buf=0x10003d94, len=128
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d000
+k_recv_msg: buf=0x10003d94, len=128
+k_recv_msg: buf=0x10003d94, len=128
+k_recv_msg: buf=0x10003d94, len=128
+k_mbx_get: tid=1
+TEST CASE 5: PASS
+G10-TS2-LOG: Test[0]-[4]: task being created.
+G10-TS2-LOG: Test[0]-[4]: result = 1.
+k_mbx_get: tid=3
+TEST CASE 6: PASS
+G10-TS2-LOG: Test[0]-[5]: task being created.
+G10-TS2-LOG: Test[0]-[5]: result = 1.
+G10-TS2: FINISHED
+G10-TS2-LOG: Test 0: 6/6 PASSED. Expected = 0x3F, result = 0x3F
+G10-TS2: 1/1 test function(s) COMPLETED.
+G10-TS2: 6/6 tests PASSED.
+G10-TS2: 0/6 tests FAILED.
+G10-TS2: END
+

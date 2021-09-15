@@ -1,0 +1,121 @@
+k_mem_init: algo = 5
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x10007000, 0x10007fff].
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x2007c000, 0x20083fff].
+G10-TS1: START
+k_mpool_alloc: mpid = 1, size = 768, 0x300
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_recv_msg: buf=0x2007c2ac, len=64
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_recv_msg: buf=0x2007c580, len=128
+=>=================================
+G10-TS1-LOG: => START: priv_task1()
+G10-TS1-LOG: priv_task1: has TID 1
+=>=================================
+G10-TS1-LOG: priv_task1: creating a mailbox of size 128 Bytes
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+G10-TS1-LOG: priv_task1: Successfully created mailbox.
+G10-TS1-LOG: PASSED TEST 1 !!!
+G10-TS1-LOG: priv_task1: creating task2... prio: LOW
+k_tsk_create: entering...
+task = 0x2007cbe4, task_entry = 0x2da9, prio=130, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+G10-TS1-LOG: priv_task1: Successfully created task2.
+G10-TS1-LOG: PASSED TEST 2 !!!
+G10-TS1-LOG: priv_task1: creating task1... prio: HIGH
+k_tsk_create: entering...
+task = 0x2007cbe0, task_entry = 0x2a61, prio=128, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=>=================================
+G10-TS1-LOG: => START: task1
+G10-TS1-LOG: task1: has TID 3
+=>=================================
+G10-TS1-LOG: task1: creating a mailbox of size 128 Bytes
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_mbx_get: tid=3
+G10-TS1-LOG: task1: Mailbox successfully created. Free space in mailbox is 128 Bytes. TEST PASSED
+G10-TS1-LOG: PASSED TEST 4 !!!
+k_mpool_alloc: mpid = 0, size = 128, 0x80
+k_send_msg: receiver_tid = 3, buf=0x10007000
+G10-TS1-LOG: task1: Message successfully sent to itself.
+G10-TS1-LOG: PASSED TEST 5 !!!
+k_mbx_get: tid=3
+G10-TS1-LOG: task1: mailbox is full. Free space in mailbox is 0 Bytes.
+G10-TS1-LOG: PASSED TEST 6 !!!
+G10-TS1-LOG: task1: changing prio -> LOW
+G10-TS1-LOG: task1: because prio is now LOW, should reschedule to priv_task1 again...
+k_tsk_set_prio: entering...
+task_id = 3, prio = 130.
+G10-TS1-LOG: priv_task1: Successfully created task1.
+G10-TS1-LOG: PASSED TEST 3 !!!
+=>=================================
+G10-TS1-LOG: => Re-entering: priv_task1()
+=>=================================
+G10-TS1-LOG: priv_task1: create message to send to task1 (which has a full mailbox)...
+k_mpool_alloc: mpid = 0, size = 6, 0x6
+k_send_msg: receiver_tid = 3, buf=0x10007080
+=>=================================
+G10-TS1-LOG: => Re-entering: task1()
+=>=================================
+=>=================================
+G10-TS1-LOG: => START: task2
+G10-TS1-LOG: task2: has TID 2
+=>=================================
+G10-TS1-LOG: task2: creating a mailbox of size 128 Bytes
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_mbx_get: tid=2
+G10-TS1-LOG: task2: Mailbox successfully created. Free space in mailbox is 128 Bytes.
+G10-TS1-LOG: PASSED TEST 8 !!!
+k_recv_msg: buf=0x10003d09, len=128
+=>=================================
+G10-TS1-LOG: => Re-entering: task1()
+=>=================================
+k_recv_msg: buf=0x10003c09, len=128
+G10-TS1-LOG: priv_task1: Message unsuccessfully sent (CORRECT) to task1 as its mailbox is full. Now in BLK_SEND state
+G10-TS1-LOG: PASSED TEST 7 !!!
+=>=================================
+G10-TS1-LOG: => Re-entering: priv_task1()
+=>=================================
+k_mpool_alloc: mpid = 0, size = 6, 0x6
+k_send_msg: receiver_tid = 2, buf=0x100070a0
+G10-TS1-LOG: priv_task1: Message successfully sent to task2 to unblock it. TEST PASSED
+G10-TS1-LOG: PASSED TEST 11 !!!
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007ca00
+k_mpool_dealloc: mpid = 1, ptr = 0x2007c700
+G10-TS1-LOG: task1: received message to clear mailbox.
+G10-TS1-LOG: PASSED TEST 10 !!!
+=>=================================
+G10-TS1-LOG: => Re-entering: task1()
+=>=================================
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d000
+k_mpool_dealloc: mpid = 1, ptr = 0x2007c780
+k_mbx_get: tid=2
+G10-TS1-LOG: task2: recv_msg failed since maibox is empty.
+G10-TS1-LOG: PASSED TEST 9 !!!
+=>=================================
+G10-TS1-LOG: => Re-entering: task2()
+=>=================================
+G10-TS1-LOG: Expected order of execution...
+1 -> 3 -> 1 -> 3 -> 2 -> 3 -> 1 -> 3 -> 2 -> NULL
+G10-TS1-LOG: Actual order of execution...
+1 -> 3 -> 1 -> 3 -> 2 -> 3 -> 1 -> 3 -> 2 -> NULL
+G10-TS1-LOG: PASSED TEST 12 !!!
+====================================
+G10-TS1-LOG: TOTAL PASSED TESTS: 12/12
+G10-TS1-LOG: TOTAL FAILED TESTS: 0/12
+====================================
+G10-TS1: END
+

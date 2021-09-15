@@ -1,0 +1,221 @@
+k_mem_init: algo = 5
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x10007000, 0x10007fff].
+k_mpool_init: algo = 5
+k_mpool_init: RAM range: [0x2007c000, 0x20083fff].
+G10-TS4: START
+k_mpool_alloc: mpid = 1, size = 768, 0x300
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_mbx_create: size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+k_recv_msg: buf=0x2007c2ac, len=64
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_recv_msg: buf=0x2007c580, len=128
+G10-TS4-LOG2: TID = 1, priv_task1: starting test0
+=> START: priv_task1()
+k_tsk_set_prio: entering...
+task_id = 1, prio = 131.
+k_tsk_create: entering...
+task = 0x10000061, task_entry = 0x2be9, prio=129, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=> START: task1() w/ tid=3
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_send_msg: receiver_tid = 15, buf=0x10003b8c
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 15, buf=0x10003c0c
+k_recv_msg: buf=0x2007c2ac, len=64
+k_mbx_get: tid=15
+TEST CASE 1: PASS
+G10-TS4-LOG: Test[0]-[0]: task being created.
+G10-TS4-LOG: Test[0]-[0]: result = 1.
+k_recv_msg: buf=0x1000420c, len=128
+k_tsk_create: entering...
+task = 0x10000061, task_entry = 0x2d55, prio=128, stack_size = 512
+k_mpool_alloc: mpid = 1, size = 512, 0x200
+=> START: task2()
+=> START: task2() w/ tid=4
+k_mbx_create: size = 128
+k_mpool_alloc: mpid = 1, size = 128, 0x80
+k_send_msg: receiver_tid = 15, buf=0x10003c8c
+k_mbx_get: tid=15
+TEST CASE 2: PASS
+G10-TS4-LOG: Test[0]-[1]: task being created.
+G10-TS4-LOG: Test[0]-[1]: result = 1.
+k_recv_msg: buf=0x1000420c, len=128
+k_recv_msg: buf=0x2007c2ac, len=64
+TEST CASE 3: PASS
+G10-TS4-LOG: Test[0]-[2]: task being created.
+G10-TS4-LOG: Test[0]-[2]: result = 1.
+k_send_msg_nb: receiver_tid = 15, buf=0x10003d0c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x10003d8c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x10003e0c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_tsk_get: entering...
+tid = 4, buffer = 0x2007c28c.
+k_send_msg: receiver_tid = 4, buf=0x2007c244
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+TEST CASE 4: PASS
+G10-TS4-LOG: Test[0]-[3]: task being created.
+G10-TS4-LOG: Test[0]-[3]: result = 1.
+k_send_msg: receiver_tid = 15, buf=0x1000400c
+k_mbx_get: tid=15
+TEST CASE 5: PASS
+G10-TS4-LOG: Test[0]-[4]: task being created.
+G10-TS4-LOG: Test[0]-[4]: result = 1.
+k_send_msg: receiver_tid = 15, buf=0x1000408c
+k_send_msg: receiver_tid = 15, buf=0x1000410c
+k_send_msg: receiver_tid = 15, buf=0x1000418c
+k_recv_msg: buf=0x1000420c, len=128
+k_recv_msg: buf=0x2007c580, len=128
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_tsk_get: entering...
+tid = 4, buffer = 0x2007c28c.
+k_send_msg: receiver_tid = 4, buf=0x2007c244
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+TEST CASE 6: PASS
+G10-TS4-LOG: Test[0]-[5]: task being created.
+G10-TS4-LOG: Test[0]-[5]: result = 1.
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d200
+k_mpool_dealloc: mpid = 1, ptr = 0x2007c780
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_mbx_ls: buf=0x1000420c, count=6
+k_tsk_ls: buf=0x1000420c, count=6
+TEST CASE 7: PASS
+G10-TS4-LOG: Test[0]-[6]: task being created.
+G10-TS4-LOG: Test[0]-[6]: result = 1.
+k_send_msg_nb: receiver_tid = 15, buf=0x10003e8c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x10003f0c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x10003f8c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_tsk_get: entering...
+tid = 3, buffer = 0x2007c28c.
+k_send_msg: receiver_tid = 3, buf=0x2007c244
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+TEST CASE 8: PASS
+G10-TS4-LOG: Test[0]-[7]: task being created.
+G10-TS4-LOG: Test[0]-[7]: result = 1.
+k_tsk_exit: entering...
+k_mpool_dealloc: mpid = 1, ptr = 0x2007d000
+k_mpool_dealloc: mpid = 1, ptr = 0x2007c700
+k_mbx_ls: buf=0x1000420c, count=6
+k_tsk_ls: buf=0x1000420c, count=6
+TEST CASE 9: PASS
+G10-TS4-LOG: Test[0]-[8]: task being created.
+G10-TS4-LOG: Test[0]-[8]: result = 1.
+k_send_msg_nb: receiver_tid = 15, buf=0x1000428c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x1000430c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x1000438c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_tsk_get: entering...
+tid = 3, buffer = 0x2007c28c.
+k_send_msg: receiver_tid = 14, buf=0x2007c1ec
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_mbx_get: tid=15
+TEST CASE 10: PASS
+G10-TS4-LOG: Test[0]-[9]: task being created.
+G10-TS4-LOG: Test[0]-[9]: result = 1.
+k_send_msg_nb: receiver_tid = 15, buf=0x1000440c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg_nb: receiver_tid = 15, buf=0x1000448c
+k_send_msg: receiver_tid = 14, buf=0x2007c2ac
+k_send_msg: receiver_tid = 14, buf=0x2007c1ec
+k_recv_msg: buf=0x2007c2ac, len=64
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_send_msg: receiver_tid = 254, buf=0x2007c580
+Entering c_UART0_IRQHandler
+k_recv_msg_nb: buf=0x10002d14, len=64
+k_recv_msg: buf=0x2007c580, len=128
+k_mbx_get: tid=15
+TEST CASE 11: PASS
+G10-TS4-LOG: Test[0]-[10]: task being created.
+G10-TS4-LOG: Test[0]-[10]: result = 1.
+G10-TS4: FINISHED
+G10-TS4-LOG: Test 0: 11/11 PASSED. Expected = 0x7FF, result = 0x7FF
+G10-TS4: 1/1 test function(s) COMPLETED.
+G10-TS4: 11/11 tests PASSED.
+G10-TS4: 0/11 tests FAILED.
+G10-TS4: END
+
