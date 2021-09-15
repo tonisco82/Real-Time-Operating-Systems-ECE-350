@@ -1,0 +1,39 @@
+G10-TS2: START
+0 free memory block(s) found
+G10-TS2: TEST CASE 1 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 2 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 3 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 4 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 5 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 6 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 7 - PASS
+0x20083fe0: 0x20
+1 free memory block(s) found
+G10-TS2: TEST CASE 8 - PASS
+0x20083fe0: 0x20
+0x20080000: 0x20
+2 free memory block(s) found
+G10-TS2: TEST CASE 9 - PASS
+0x20080000: 0x20
+0x20083fc0: 0x40
+2 free memory block(s) found
+G10-TS2: TEST CASE 10 - PASS
+0x20080000: 0x20
+0x2007ffe0: 0x20
+0x20083fc0: 0x40
+3 free memory block(s) found
+G10-TS2: TEST CASE 11 - PASS
+0 free memory block(s) found
+G10-TS2: TEST CASE 12 - PASS
+0x2007c000: 0x8000
+1 free memory block(s) found
+G10-TS2: TEST CASE 13 - PASS
+G10-TS2: 13/13 tests PASSED
+G10-TS2: 0/13 tests FAILED
+G10-TS2: END
